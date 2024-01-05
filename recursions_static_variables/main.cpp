@@ -1,0 +1,24 @@
+
+#include<iostream>
+using namespace std;
+int fun(int n)
+{
+    static int x=0;
+    if(n>0)
+    {
+        x++;
+        return fun(n-1)+x;
+    }
+    return 0;
+}
+int main()
+{
+    int x;
+    x=fun(5);
+    cout<<x<<endl;
+    x=fun(5);
+    cout<<x;
+    return 0;
+}
+
+
